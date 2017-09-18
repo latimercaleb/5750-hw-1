@@ -1,13 +1,46 @@
 <!DOCTYPE html>
+<!--==================================================================
+//
+// Web site: TacoTown
+// Web page: reservation.html
+// Description: Form controls for scheduling reservations of groups
+//=================================================================-->
     <html>
         <head>
-            <title>Reservation Page</title>
-            <link rel='stylesheet' type = 'text/css' href='css/' />
+            <title>Tacotown: Reservations</title>
+            <link rel='stylesheet' type = 'text/css' href='css/styles.css' />
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                        integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+                        crossorigin="anonymous"></script>
+           <script src = 'javascript/script.js'></script>
          </head>
          <body>
-             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                         integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-                         crossorigin="anonymous"></script>
-            <script src = 'javascript/'></script>
+           <header>
+             <h1>Carryout or eat in!</h1>
+           </header>
+           <main class='main-content'>
+             <p>We support group accomadations for our dine in tables, feel free to reserve a space here</p>
+             <form method='get' action='http://www.tipjar.com/cgi-bin/test'>
+               <label>Party Name:</label>
+                <input type='text'name='partyName' required/><br />
+               <label>Date:</label>
+               <input type='date' name='reservationDate' required/><br />
+               <label>Part of the day:</label>
+               <select name='partOfDay' required>
+                 <option value="morning">Morning</option>
+                 <<option value="afternoon">Afternoon</option>
+                 <<option value="evening">Evening</option>
+               </select>
+                </br/>
+               <label>Number in your party: </label>
+               <input type='number' required/><br />
+               <label>E-mail address: </label>
+               <input type='email' name='email' required/><br />
+               <label>Cell Phone: </label>
+               <input type='tel' required/><br />
+               <input type='reset' />
+               <input type='submit' value='Submit Reservation' />
+             </form>
+           </main>
         </body>
     </html>
