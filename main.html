@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <!--==================================================================
 //
 // Web site: TacoTown
@@ -10,63 +9,29 @@
 // Description:
 //   Resturant page with 2 supporting pages & 2 images
 //=================================================================-->
-<!--Needs 2 images and other requirements-->
+<!DOCTYPE html>
     <html>
         <head>
             <title>TacoTown: Main</title>
             <link rel='stylesheet' type = 'text/css' href='css/styles.css' />
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                        integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-                        crossorigin="anonymous"></script>
-           <script src = 'javascript/script.js'></script>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
          </head>
          <body>
            <header>
+               <img  src='css/img/taco.jpg' alt='tacoMan picture'/>
              <h1>Welcome to tacotown!</h1>
            </header>
+           <nav>
+               <a href = 'menu.html'>Menu</a>
+               <a href='reservation.html'>Reservation</a>
+           </nav>
+           <hr />
            <main class='main-content'>
               <dl>
                 <dt>About Us</dt>
                 <dd>We here at tacotown care about all of your taco needs! Been in business of Mexican cuisine since 1985. We do it all! Tacos, quesadillas, tacos, burritos, tacos, nachos and oh did I mention tacos? Join us on Tuesday for our taco attack special!</dd>
-                <dt>Hours &amp; Location</dt>
+                <dt>Location</dt>
                 <dd>You can find our food truck right on campus at Wayne State, just a hop from the student center on the middle of 5221 Gullen Mall, Detroit, MI 48202.</dd>
-                <dt>
-                <table>
-                  <thead>Hours of Operation</thead>
-                  <tr>
-                    <th>Days</th>
-                    <th>Hours</th>
-                  </tr>
-                  <tr>
-                    <td>Sunday</td>
-                    <td>10a-2p</td>
-                  </tr>
-                  <tr>
-                    <td>Monday</td>
-                    <td>8a-5p</td>
-                  </tr>
-                  <tr>
-                    <td>Tuesday</td>
-                    <td>8a-5p</td>
-                  </tr>
-                  <tr>
-                    <td>Wednesday</td>
-                    <td>8a-5p</td>
-                  </tr>
-                  <tr>
-                    <td>Thursday</td>
-                    <td>8a-5p</td>
-                  </tr>
-                  <tr>
-                    <td>Friday</td>
-                    <td>8a-5p</td>
-                  </tr>
-                  <tr>
-                    <td>Saturday</td>
-                    <td>10a-2p</td>
-                  </tr>
-                </table>
-              </dt>
               <dd>History</dd>
               <dt>A long time ago, in a land far away there once was a man that craved soft, savory meat wrapped in something crunchy. That man invented the first taco. And the great great great descendant of that man. He built this truck and we've been around ever since, serving tacos at super sonic speeds all across America</dt>
               <dd>Founders &amp; Owner</dd>
@@ -80,6 +45,48 @@
                 </ul>
               </dt>
               </dl>
+              <h6>Hours of Operation</h6>
+              <table>
+                <tr>
+                  <th>Days</th>
+                  <th>Hours</th>
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td>10a-2p</td>
+                </tr>
+                <tr>
+                  <td>Monday</td>
+                  <td>8a-5p</td>
+                </tr>
+                <tr>
+                  <td>Tuesday</td>
+                  <td>8a-5p</td>
+                </tr>
+                <tr>
+                  <td>Wednesday</td>
+                  <td>8a-5p</td>
+                </tr>
+                <tr>
+                  <td>Thursday</td>
+                  <td>8a-5p</td>
+                </tr>
+                <tr>
+                  <td>Friday</td>
+                  <td>8a-5p</td>
+                </tr>
+                <tr>
+                  <td>Saturday</td>
+                  <td>10a-2p</td>
+                </tr>
+              </table>
+              <p>Please find our contact information in the footer and give us a call or shoot us a reservation on our reservations page!</p>
            </main>
+           <footer>
+               <b>Copyright &copy; TacoTown 5221 Gullen Mall, Detroit, MI 48202 555-555-5555</b><br />
+               <i>All companies listed in this website are fictional and are solely for the purpose of a class assignment</i><br />
+               <hr />
+               <p>Designed and built by Caleb Latimer reach out to me at <span id='mail'><a href="mailto:latimercaleb@gmail.com?subject=feedback">latimercaleb@gmail.com</a></span></p>
+           </footer>
         </body>
     </html>
