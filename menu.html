@@ -1,13 +1,76 @@
+<!--==================================================================
+//
+// Web site: TacoTown
+// Web page: menu.html
+// Description: Menu page of taco town, maintains consistent header and footer of main page
+//=================================================================-->
 <!DOCTYPE html>
     <html>
         <head>
-            <title>Menu Page</title>
-            <link rel='stylesheet' type = 'text/css' href='css/' />
+            <title>Tacotown: Menu</title>
+            <link rel='stylesheet' type = 'text/css' href='css/styles.css' />
+            <meta name="viewport" content="width=device-width, initial-scale=1">
          </head>
          <body>
-             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-                         integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-                         crossorigin="anonymous"></script>
-            <script src = 'javascript/'></script>
+           <header>
+               <img  src='css/img/taco.jpg' alt='tacoMan picture'/>
+             <h1>Please find our menu below</h1>
+           </header>
+           <nav>
+               <a href = 'main.html'>Main</a>
+               <a href='reservation.html'>Reservation</a>
+           </nav>
+           <hr />
+           <main class='main-content'>
+               <span><a href='#mail'>To bottom</a></span>
+             <table>
+               <thead>Menu </thead>
+               <tr>
+                 <th>Image</th>
+                 <th>Dish</th>
+                 <th>Description</th>
+                 <th>Price</th>
+               </tr>
+               <tr>
+                   <td><img  src='css/img/tacoCombo.jpg' width='450' alt='taco picture'/></td>
+                 <td>Taco Combo</td>
+                 <td>3 tacos with the meat of your choosing with a side of salad,rice or beans</td>
+                 <td>$10</td>
+               </tr>
+               <tr>
+                   <td><img  src='css/img/queasadillaCombo.jpg' width='450' alt='quesadilla picture'/></td>
+                 <td>Quesadilla Combo</td>
+                 <td>2 stuffed quesadillas with the meat of your choosing with a side of salad, rice or beans</td>
+                 <td>$12</td>
+               </tr>
+               <tr>
+                   <td><img  src='css/img/burittoCombo.jpg' alt='burrito picture'/></td>
+                 <td>Burrito Combo</td>
+                 <td>1 stuffed 1.5 lbs burrito with the meat of your choosing with a side of salad, rice or beans</td>
+                 <td>$12</td>
+               </tr>
+               <tr>
+                   <td><img  src='css/img/nachos.jpg' alt='nachos picture'/></td>
+                 <td>Nachos</td>
+                 <td>Fully loaded order of Nachos with meat, cheese, salsa, sour cream, avacado, bacon and jalape&ntilde;os </td>
+                 <td>$12</td>
+               </tr>
+               <tr>
+                   <td><img  src='css/img/salad.jpg' width='450' alt='salad picture'/></td>
+                 <td>Chopped</td>
+                 <td>A healthy caesar salad with optional chicken, bacon and sunflower seeds</td>
+                 <td>$8</td>
+               </tr>
+             </table>
+             <h6>We care about our customers!</h6>
+             <p>Special orders are available upon request</p>
+             <span><a href='#top'>To top</a></span>
+           </main>
+           <footer>
+              <b>Copyright &copy; TacoTown 5221 Gullen Mall, Detroit, MI 48202 555-555-5555</b><br />
+               <i>All companies listed in this website are fictional and are solely for the purpose of a class assignment</i><br />
+               <hr />
+               <p>Designed and built by Caleb Latimer reach out to me at <span id='mail'><a href="mailto:latimercaleb@gmail.com?subject=feedback">latimercaleb@gmail.com</a></span></p>
+           </footer>
         </body>
     </html>
