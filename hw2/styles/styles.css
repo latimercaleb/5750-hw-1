@@ -1,0 +1,21 @@
+/*==========================================================
+
+ Title: CSS External for Akihabara Showcase
+ Description:
+   This CSS is the external styling for the akihabara showcase website
+
+==========================================================*/
+
+/* Custom Font*/
+@import url('https://fonts.googleapis.com/css?family=Oxygen');
+
+body {
+  font-family: 'Oxygen', Helvetica, sans-serif;
+  margin: 20px;
+  padding: 10px;
+}
+
+.mCol {
+  column-count: 3;
+  column-rule: 2px double green;
+}
