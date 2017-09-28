@@ -13,9 +13,47 @@ body {
   font-family: 'Oxygen', Helvetica, sans-serif;
   margin: 20px;
   padding: 10px;
+  background-image: url('img/red-sky.jpg');
+  color: #FFF;
 }
 
-.mCol {
-  column-count: 3;
-  column-rule: 2px double green;
+header {
+  text-align: center;
+  text-shadow: 4px 4px 2px rgb(119,136,153);
+}
+
+nav {
+  text-align: center;
+  /*make sticky*/
+}
+
+main {
+  text-shadow: -2px 1px 2px rgba(119, 136, 153, 1);
+}
+
+.main-button {
+  margin: 0 2px 0 2px;
+  background-color: #7FFF00;
+  color: #FFF;
+}
+
+.tourist-button {
+  margin: 0 2px 0 2px;
+  background-color: #F0E68C;
+  color: #FFF;
+}
+
+.map-button {
+  margin: 0 2px 0 2px;
+  background-color: #B0C4DE;
+  color: #FFF;
+}
+
+.multi-cell {
+  margin-right: 5px;
+  border-right: 2px double #FFF;
+}
+
+.top-content {
+  text-align: center;
 }

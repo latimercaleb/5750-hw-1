@@ -17,40 +17,69 @@
         <meta charset="UTF-8">
         <link rel='stylesheet' type='text/css' href='styles/font-awesome-4.7.0/font-awesome.min.css' />
         <link rel='stylesheet' type='text/css' href='styles/pure-release-1.0.0/pure-min.css' />
-        <link rel='stylesheet' type = 'text/css' href='styles/styles.css'/>
+        <link rel='stylesheet' type='text/css' href='styles/styles.css'/>
+        <link rel='icon' type='img/png' sizes='16x16' href='styles/img/customFavicon/favicon-16x16.png'/>
         <script type='text/javascript' src='javascript/jquery-3.2.1.min.js'></script>
         <script type='text/javascript' src='javascript/script.js'></script>
      </head>
      <body>
-         <header>
-           <h1>Akihabara</h1>
-           <h2>Every gamers paradiso</h2>
+         <header class='pure-g'>
+           <h1 class='pure-u-5-5'>Akihabara</h1>
+           <h2 class='pure-u-5-5'>Every gamers paradiso</h2>
          </header>
-         <nav>
-           <button>main</button>
-           <button>tourist</button>
-           <button>map</button>
+         <!-- use pure to make header become sticky on overflow -->
+         <nav class='pure-button-group' role='group' aria-label='nav-buttons'>
+           <button class='pure-button main-button'>main</button>
+           <button class='pure-button tourist-button'>tourist</button>
+           <button class='pure-button map-button'>map</button>
+           <hr />
          </nav>
          <main>
-           <article>
+           <article class='pure-g top-content'>
              <!--Requirement: Multi-column paragraph-->
-             <h2>General</h2>
-             <p>Welcome to electric town!</p>
-             <strong>A brief summary</strong>
-             <div class='mCol'>
-               <p>The name Akihabara is a shortening of Akibagahara (秋葉が原, "autumn leaf field"), which ultimately comes from Akiba (秋葉), named after a fire-controlling deity of a firefighting shrine built after the area was destroyed by a fire in 1869.</p>
-               <p>Post WWIII the town earned itself the name of Denki Gai (Electric Town) as it exploded on the economic scene as a source of literally any and everything</p>
-               <p>In present day, Akihabara is considered to be an Otaku hotspot as it is a world famous shopping district for video games, anime, manga, and various other forms of technology.</p>
+             <h2 class='pure-u-5-5'>General</h2>
+             <p class='pure-u-5-5'>Welcome to electric town!</p>
+             <strong class='pure-u-5-5'>A brief summary</strong>
+             <div class='pure-u-g'>
+               <p class='pure-u-1-3 multi-cell'>The name Akihabara is a shortening of Akibagahara (秋葉が原, "autumn leaf field"), which ultimately comes from Akiba (秋葉), named after a fire-controlling deity of a firefighting shrine built after the area was destroyed by a fire in 1869.</p>
+               <p class='pure-u-1-3 multi-cell'>Post WWIII the town earned itself the name of Denki Gai (Electric Town) as it exploded on the economic scene as a source of literally any and everything</p>
+               <p class='pure-u-1-3 multi-cell'>In present day, Akihabara is considered to be an Otaku hotspot as it is a world famous shopping district for video games, anime, manga, and various other forms of technology.</p>
              </div>
            </article>
            <hr />
-           <article>
+           <article class='mid-content'>
              <h2>In Detail</h2>
-             <p>Akihabara is located in Japan</p>
+             <p>Akihabara is located in the Chiyoda ward of Tokyo,Japan.</p>
+             <p>Most of the major shops specializing in manga, anime, and electronics are located just west of the Akihabara Station</p>
+             <strong>History</strong>
+             <p>Akihabara used to be near the Edo gaate and serve as a transportation passage from the city and the rest of northwest Japan</p>
+             <p>Back then the region was home to</p>
+             <ul>
+               <li>Crafstmen</li>
+               <li>Tradesman</li>
+               <li>Low class samurai</li>
+             </ul>
+             <p>The city was burned to the ground in 1869 as the result of one of the frequent Tokyo fires which were a big problem back then</p>
+             <p>As a direct result of the fire, a shrine called Chinkasha and later called Akiba shrine was built to replace the buildings and as a show of major effort to prevent future fires</p>
+             <p>In 1888 the station was built so the shrine got movedto Taito ward where it stands today as a monument of history</p>
+             <p>Post-1890, Akihabara station becamea major frieght point for the district specializing in the produce market, then in 1930s began to cater more towards future-oriented markets focusing more on household electronics which is what stated the nickname of Electric Town</p>
+             <p>As household electronicbegan to lose their futuristic appeain the 8s the shops began tofocus more towards computers</p>
+             <p>With the introduction of computers as a hobbyist pass time and shops turning to tailor towards that subculture it brought about the Otaku specialization</p>
+             <p>As time went on this computer otaku customer base changed the culture of Akihabara to reflect their popular interests such as anime,manga and video games</p>
+             <p>As it stands today Akihabara is a worldwide epicenter for Otaku culture and is even regarded as a special place in most popularized series</p>
            </article>
            <hr />
-           <article>
+           <article class='bot-content'>
              <h2>Want to learn more?</h2>
+             <p>Check out the following details</p>
+             <dl>
+               <dt>Art &amp; History</dt>
+               <dd>Some link</dd>
+               <dt>Religion &amp; Subculture</dt>
+               <dd>Another Link</dd>
+               <dt>Current events</dt>
+               <dd>Last link</dd>
+             </dl>
            </article>
          </main>
          <footer>
