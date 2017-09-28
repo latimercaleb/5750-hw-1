@@ -13,13 +13,19 @@ body {
   font-family: 'Oxygen', Helvetica, sans-serif;
   margin: 20px;
   padding: 10px;
-  background-image: url('img/red-sky.jpg');
   color: #FFF;
+  background: linear-gradient(to top, #fc00ff, #3232FF);
+}
+
+li {
+    list-style-position: inside;
+    list-style-type: hiragana-iroha;
 }
 
 header {
   text-align: center;
   text-shadow: 4px 4px 2px rgb(119,136,153);
+
 }
 
 nav {
@@ -31,29 +37,52 @@ main {
   text-shadow: -2px 1px 2px rgba(119, 136, 153, 1);
 }
 
+article,footer{
+    text-align: center;
+}
+
+footer {
+    margin: 20px;
+    color: black;
+    font-weight: 500;
+    background-color: #FFF;
+}
+
 .main-button {
   margin: 0 2px 0 2px;
-  background-color: #7FFF00;
+  background-color: #8470FF;
   color: #FFF;
 }
 
 .tourist-button {
   margin: 0 2px 0 2px;
-  background-color: #F0E68C;
+  background-color: #120A8F;
   color: #FFF;
 }
 
 .map-button {
   margin: 0 2px 0 2px;
-  background-color: #B0C4DE;
+  background-color: #6666FF;
   color: #FFF;
 }
 
-.multi-cell {
-  margin-right: 5px;
-  border-right: 2px double #FFF;
+.multi-col {
+    column-count: 3;
+    column-rule: 2px double #FFF;
 }
 
 .top-content {
   text-align: center;
+}
+
+.art {
+    
+}
+
+.faith {
+
+}
+
+.news {
+
 }
