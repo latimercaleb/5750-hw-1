@@ -2,8 +2,7 @@
 
  Title: CSS External for Akihabara Showcase
  Description:
-   This CSS is the external styling for the akihabara showcase website, this is the core styles for the site
-
+   This CSS is the external styling for the akihabara showcase website, this is the core styles for the site. Individual custom styles outside of the pure-framework.
 ==========================================================*/
 
 /* Custom Font*/
@@ -54,7 +53,7 @@ dt {
   background-color: #FFF;
 }
 
-dd {
+.card-text {
   display: none; /*content is hidden on load, unhidden on click?*/
 }
 
