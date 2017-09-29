@@ -2,7 +2,7 @@
 
  Title: CSS External for Akihabara Showcase
  Description:
-   This CSS is the external styling for the akihabara showcase website
+   This CSS is the external styling for the akihabara showcase website, this is the core styles for the site
 
 ==========================================================*/
 
@@ -15,11 +15,6 @@ body {
   padding: 10px;
   color: #FFF;
   background: linear-gradient(to top, #fc00ff, #3232FF);
-}
-
-li {
-    list-style-position: inside;
-    list-style-type: hiragana-iroha;
 }
 
 header {
@@ -46,6 +41,21 @@ footer {
     color: black;
     font-weight: 500;
     background-color: #FFF;
+}
+
+li {
+    list-style-position: inside;
+    list-style-type: hiragana-iroha;
+}
+
+dt {
+  color: #000;
+  text-shadow: none;
+  background-color: #FFF;
+}
+
+dd {
+  display: none; /*content is hidden on load, unhidden on click?*/
 }
 
 .main-button {
@@ -75,14 +85,24 @@ footer {
   text-align: center;
 }
 
-.art {
-    
+.ex-history {
+  border: 1px solid #FFF;
+  padding: 40px;
+  text-align: center;
 }
 
-.faith {
-
+.geo {
+  border: 1px solid #FFF;
+  padding: 40px;
+  text-align: center;
 }
 
-.news {
+.pol {
+  border: 1px solid #FFF;
+  padding: 40px;
+  text-align: center;
+}
 
+.footer-pic {
+  float: right;
 }

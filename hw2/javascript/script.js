@@ -5,8 +5,11 @@
    This Javascript is the external functionality for the akihabara showcase website
 
 ==========================================================*/
+
+y = 10;
 function loadMain() {
     location.assign('main.html');
+    $('.main-button').css('text-decoration', 'overline');
 }
 
 function loadTour() {
