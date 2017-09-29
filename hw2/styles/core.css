@@ -16,6 +16,16 @@ body {
   background: linear-gradient(to top, #fc00ff, #3232FF);
 }
 
+* ::selection {
+  color: black;
+  background-color: white;
+}
+
+small::selection {
+  color: white;
+  background-color: black;
+}
+
 header {
   text-align: center;
   text-shadow: 4px 4px 2px rgb(119,136,153);
@@ -104,4 +114,12 @@ dt {
 
 .footer-pic {
   float: right;
+}
+
+.text-special {
+  display: none;
+}
+
+.info-grid:hover{
+  cursor: pointer;
 }
