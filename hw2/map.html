@@ -16,24 +16,21 @@
       <link rel="icon" type="image/png" sizes="16x16" href="styles/img/customFavicon/favicon-16x16.png">
       <script type='text/javascript' src='javascript/jquery-3.2.1.min.js'></script>
       <script type='text/javascript' src='javascript/script.js'></script>
-     <body>
-       <header>
-         <h1>Akihabara</h1>
-         <h2>Town Map</h2>
-       </header>
+     <body onload="loadMap()">
+         <header class='pure-g'>
+           <h1 class='pure-u-5-5'>Akihabara</h1>
+           <h2 class='pure-u-5-5'>Every gamers paradiso</h2>
+         </header>
        <nav class='pure-button-group' role='group' aria-label='nav-buttons'>
-         <button class='pure-button main-button'
-                      onclick='loadMain()'>
+         <button class='pure-button main-button'>
              <i class="fa fa-book" aria-hidden="true"></i>
              Main
          </button>
-         <button class='pure-button tourist-button'
-                       onclick='loadTour()'>
+         <button class='pure-button tourist-button'>
              <img src='styles/img/x-run.gif' width='16' />
              Tourist
          </button>
-         <button class='pure-button map-button'
-                       onclick='loadMap()'>
+         <button class='pure-button map-button'>
              <i class="fa fa-map-o" aria-hidden="true"></i>
              Map
          </button>
