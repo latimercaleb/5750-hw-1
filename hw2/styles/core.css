@@ -1,13 +1,21 @@
 /*==========================================================
 
  Title: CSS External for Akihabara Showcase
- 
+
  Description:
    This CSS is the external styling for the akihabara showcase website, this is the core styles for the site. Individual custom styles outside of the pure-framework.
 ==========================================================*/
 
 /* Custom Font*/
 @import url('https://fonts.googleapis.com/css?family=Oxygen');
+
+@keyframes slide {
+    0% {margin-left: 0px}
+    25% {margin-left: 10px; color: #e3f2fd;  opacity: 0.6;}
+    50% {margin-left: 30px;  color: #bbdefb; opacity: 0.4;}
+    75% {margin-left: 60px;  color: #64b5f6; opacity: 0.2;}
+    100% {margin-left: 70px; color: #e3f2fd; opacity: 0;}
+}
 
 body {
   font-family: 'Oxygen', Helvetica, sans-serif;
@@ -51,6 +59,10 @@ footer {
     color: black;
     font-weight: 500;
     background-color: #FFF;
+}
+
+footer:hover {
+    //*Need to decide on psudo hover behavior*/
 }
 
 li {
@@ -133,7 +145,9 @@ dt {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1.2);
+    transition-timing-function: ease-in;
+    transition-duration: 0.7s;
+    transform: translate(-50%, -50%) scale(1.2) rotateY(0deg);
     background-color: #000;
 }
 
@@ -149,6 +163,23 @@ dt {
      transform: translateY(-10%) scale(1.2);
 }
 
+.card-rotate {
+    transition-timing-function: ease-out;
+    transition-duration: 0.7s;
+    transform: translate(-50%, -50%) scale(1.2) rotateY(180deg) ;
+}
+
+.text-reverse {
+    transform: rotateY(180deg);
+}
+
 #moveIcon {
     transform: translateX(45%);
+}
+
+.fa-angle-double-right {
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
 }
