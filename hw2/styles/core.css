@@ -1,14 +1,14 @@
 /*==========================================================
-
  Title: CSS External for Akihabara Showcase
 
  Description:
    This CSS is the external styling for the akihabara showcase website, this is the core styles for the site. Individual custom styles outside of the pure-framework.
 ==========================================================*/
 
-/* Custom Font*/
+/* Custom Font from google*/
 @import url('https://fonts.googleapis.com/css?family=Oxygen');
 
+/*keyframe animation for the card icon indicating user action*/
 @keyframes slide {
     0% {margin-left: 0px}
     25% {margin-left: 10px; color: #e3f2fd;  opacity: 0.6;}
@@ -17,6 +17,7 @@
     100% {margin-left: 70px; color: #e3f2fd; opacity: 0;}
 }
 
+/*Main element tags*/
 body {
   font-family: 'Oxygen', Helvetica, sans-serif;
   margin: 20px;
@@ -25,25 +26,13 @@ body {
   background: linear-gradient(to top, #fc00ff, #3232FF);
 }
 
-* ::selection {
-  color: black;
-  background-color: white;
-}
-
-small::selection {
-  color: white;
-  background-color: black;
-}
-
 header {
   text-align: center;
   text-shadow: 4px 4px 2px rgb(119,136,153);
-
 }
 
 nav {
   text-align: center;
-  /*make sticky*/
 }
 
 main {
@@ -61,10 +50,6 @@ footer {
     background-color: #FFF;
 }
 
-footer:hover {
-    //*Need to decide on psudo hover behavior*/
-}
-
 li {
     list-style-position: inside;
     list-style-type: hiragana-iroha;
@@ -76,8 +61,27 @@ dt {
   background-color: #FFF;
 }
 
+/*Psuedo selectors styled here*/
+* ::selection {
+  color: black;
+  background-color: white;
+}
+
+small::selection {
+  color: white;
+  background-color: black;
+}
+footer:hover {
+    border: 5px inset #c51162;
+}
+
+.info-grid:hover{
+  cursor: pointer;
+}
+
+/*Classes & IDs*/
 .card-text {
-  display: none; /*content is hidden on load, unhidden on click?*/
+  display: none;
 }
 
 .main-button {
@@ -133,10 +137,6 @@ dt {
   display: none;
 }
 
-.info-grid:hover{
-  cursor: pointer;
-}
-
 .focused-button{
     text-decoration: underline;
 }
@@ -150,14 +150,6 @@ dt {
     transform: translate(-50%, -50%) scale(1.2) rotateY(0deg);
     background-color: #000;
 }
-
-/*.norm-card {
-    transform: translate(50%, 50%) scale(-1.2);
-    position: static;
-    top: auto;
-    left: auto;
-    background-color: none;
-}*/
 
 .focused-card {
      transform: translateY(-10%) scale(1.2);

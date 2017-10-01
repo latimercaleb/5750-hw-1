@@ -1,12 +1,8 @@
 /*==========================================================
-
  Title: Javascript External for Akihabara Showcase
  Description:
    This Javascript is the external functionality for the akihabara showcase website
-
 ==========================================================*/
-// fix the other cards, test them and then append an x-icon from font awesome as your minimize button
-
 // nav functions
 
 // nav buttons are enabled
@@ -113,7 +109,6 @@ function activateCard(){
      else{
          $(this).children('dd').addClass('text-special');
          $(this).children('dt').removeClass('text-special');
-        // $(this).children('dd').removeClass('text-reverse');
          $(this).children('#promptIcon').removeClass('text-reverse');
          $('#moveIcon').removeClass('text-special');
      }
@@ -149,7 +144,6 @@ function reactivateCard() {
       else{
           $(this).children('dd').addClass('text-special');
           $(this).children('dt').removeClass('text-special');
-          //$(this).children('dd').removeClass('text-reverse');
           $(this).children('#promptIcon').removeClass('text-reverse');
           $('#moveIcon').removeClass('text-special');
       }
