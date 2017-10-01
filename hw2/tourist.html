@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--==================================================================
+//
+// Web site: Akihabara showcase
+// Web page: tourist.html
+// Description: Tourist page to highlight the city's strong points, and visitor attractions
+//=================================================================-->
+<html lang='en'>
+    <head>
+      <title>Akihabara: Tourist Attractions</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta charset="UTF-8">
+      <link rel='stylesheet' type='text/css' href='styles/font-awesome-4.7.0/css/font-awesome.min.css' />
+      <link rel='stylesheet' type='text/css' href='styles/pure-release-1.0.0/pure-min.css' />
+      <link rel='stylesheet' type = 'text/css' href='styles/core.css'/>
+      <link rel="icon" type="image/png" sizes="16x16" href="styles/img/customFavicon/favicon-16x16.png">
+      <script type='text/javascript' src='javascript/jquery-3.2.1.min.js'></script>
+      <script type='text/javascript' src='javascript/script.js'></script>
+     </head>
+     <body onload="loadTour()">
+         <header class='pure-g'>
+           <h1 class='pure-u-5-5'>Akihabara</h1>
+           <h2 class='pure-u-5-5'>Every gamers paradiso</h2>
+         </header>
+       <nav class='pure-button-group' role='group' aria-label='nav-buttons'>
+         <button class='pure-button main-button'>
+             <i class="fa fa-book" aria-hidden="true"></i>
+             Main
+         </button>
+         <button class='pure-button tourist-button'>
+             <img src='styles/img/x-run.gif' width='16' />
+             Tourist
+         </button>
+         <button class='pure-button map-button'>
+             <i class="fa fa-map-o" aria-hidden="true"></i>
+             Map
+         </button>
+         <hr />
+       </nav>
+       <main>
+         <article class='top-content'>
+             <div class='pure-g'>
+                 <h2 class='pure-u-5-5'>Awesome stuff to see</h2>
+                 <p class='pure-u-5-5'>All things nerd! And some other things, let's give some highlights!</p>
+             </div>
+           <div class='pure-g'>
+             <h6 class='pure-u-5-5'>Are you a game nerd? Well welcome to a bit of heaven on earth</h6>
+             <div class='pure-u-1-2'>
+               <b class='pure-u-5-5'>Arcades</b>
+               <img src='styles/img/superPotatoIntro.jpg' class='pure-img'/> <!-- make a carousel with the other imgs -->
+               <p class='pure-u-5-5'>What is a gamer without an arcade? Check out the most critcally acclaimed arcade in existence with retro classics dating back to the 70s, with 3 floors of button mashing, combo breaking, joystick slapping madness.</p>
+             </div>
+             <div class='pure-u-1-2'>
+               <b class='pure-u-5-5'>Nintendo's Rural Culture Retreat</b>
+               <img src='styles/img/nintendoRuralIntro.jpg' />
+               <p class='pure-u-5-5'>What gamer doesn't know Nintendo? If your a 90's kid lke me then Nintendo is probably what first brought you into the world of being a gamer. So of course I'm gonna recommend you go see the newly founded in 2006 musuem funded by Nintendo near the Kyoto Prefecture. The museum isn't focused around the video game makers though, it's main feature is "Hyakunin Isshu" a poetry based card game with 100 poems. Giant tiles are spread across the floor and players aim to match poem cards before their opponent. It pays homage to history and has a super modern look and feel as the panes are full interactive and can even be manipulated remotely with customized Nintendo DS handhelds. There is also a rock garden, tons of experimental interactive game tech,and other games making it well worth the trip.</p>
+             </div>
+           </div>
+           <div class='pure-g'>
+             <h6 class='pure-u-5-5'>Okay, so maybe your not a gamer, that's fine there's still some awesome stuff to see</h6>
+             <div class='pure-u-1-3'>
+               <b class='pure-u-5-5'>Akihabara Crossfield</b>
+               <img src='styles/img/crossfield.jpg' />
+               <p>The crossfield complex has a ton of stuff in it resturants, stores, conference rooms and showcases. Going on a tour and finding some good photo-ops should make your trip well worth.</p>
+             </div>
+             <div class='pure-u-1-3'>
+               <b class='pure-u-5-5'>Cat Cafe</b>
+               <img src='styles/img/catCafeIntro.jpg' class='pure-img' />
+               <p class='pure-u-5-5'>Because who doesn't like the little kitty-witty! Grab a snack and hang with these adorable little fuzzy critters</p>
+             </div>
+             <div class='pure-u-1-3'>
+               <b class='pure-u-5-5'>Weapon Store</b>
+               <img src='styles/img/weaponsIntro.jpg' class='pure-img' />
+               <p class='pure-u-5-5'>And of course who could leave without some glorious nippon steel? Check out the weapons district for various authentic swords, armor and shuriken. Try them on, take some pics, just don't lose any fingers.</p>
+             </div>
+           </div>
+         </article>
+         <hr />
+         <article class='bot-content'>
+        <div class='pure-g'>
+            <h2 class='pure-u-5-5'>Don't just sight see, get in the game</h2>
+            <p class='pure-u-5-5'>If you're in Akihabara there's a ton to do so grab your coffee, your snacks and get ready for a long haul. Because from binging anime to internet cafes we are gonna break down the hotspots so you that you know where to be. Major stuff to do breaks down into the following 3 categories:</p>
+            <ul class='pure-u-5-5'>
+              <li>Video Game Stuff</li>
+              <li>Computer Stuff</li>
+              <li>Otaku Stuff</li>
+            </ul>
+            <p class='pure-u-5-5'>Now before you start, yes <i>technically</i> all of the above are <b>Otaku</b> types of hobbies but no two snowflakes are the same. These 3 main groups of hobbies have the biggest range of shops and centers catering to that group. So looking at this objectively limiting our scope in a simple manner helps solve the TSP(traveling salesman problem) or in this case. The TOP(traveling otaku problem)</p>
+        </div>
+           <div class='pure-g'>
+             <h6 class='pure-u-5-5'>Hope you brought your wallet</h6>
+             <div class='pure-u-1-3'>
+               <b class='pure-u-5-5'>Gamers</b>
+               <img src='styles/img/gamers.jpg' />
+               <p class='pure-u-5-5'>Gamers sells a wide range of anime and manga related goods including movies, video games, CDs, stationery, software and character goods.</p>
+             </div>
+             <div class='pure-u-1-3'>
+               <b class='pure-u-5-5'>Shooting Bar EA</b>
+               <img src='styles/img/shooting-bar.jpg' class='pure-img'/>
+               <p class='pure-u-5-5'>Shooting Bar EA is a BB gun target range and bar ... yup, drink up, and shoot things! Once you've signed the obligatory rules and regs contract and ventured inside, the bar and cosy tables are surrounded by BB gun replicas hanging on the walls – Glocks, Sig Sauers, Colts, and even a Samurai Edge, the handgun used in the Resident Evil video games. The partitioned shooting range is outfitted with a touch panel to control the targets' location, and guns with three magazines of BBs or rifles with two are available to rent. Goggles are provided. So check it out!</p>
+             </div>
+             <div class='pure-u-1-3'>
+               <b class='pure-u-5-5'>Hey!</b>
+               <img src='styles/img/hey.jpg' class='pure-img'/>
+               <p class='pure-u-5-5'>Feeling competitive? Short for Hirose Entertainment Yard, Hey! is a must-stop in Akihabara for arcade game lovers. Rows and rows of arcade machines flicker under the fluorescent lights, and you'll need guts of steel and quick reflexes on the arcade's second floor, dedicated to crazy "bullet hell" shoot-'em-up games like Mushihimesama, in which endless streams of projectiles are fired at players. The third floor is filled with fighting games, and the regulars are some of the best gamers in Japan. Hey! isn't where people go to practice. It's where they go to show off.</p>
+             </div>
+           </div>
+           <div class='pure-g'>
+             <h6 class='pure-u-5-5'>Hope you remember how far you have to carry all this stuff</h6>
+             <div class='pure-u-1-3'>
+               <b class='pure-u-5-5'>Yodobashi Camera: The Leisure Hive</b>
+               <img src='styles/img/yodobashi.JPG' class='pure-img' />
+               <p class='pure-u-5-5'>Ground Zero for tech-heads everywhere. Any gadget, mobile tech, camera, computer can be found in this massive 9 floor retail center. Complete with standard and internet cafes within.</p>
+             </div>
+             <div class='pure-u-2-3'>
+               <b class='pure-u-5-5'>Tsukimo Robot Kingdom</b>
+               <img src='styles/img/roboIntro.jpg'/>
+               <p class='pure-u-5-5'>What's a computer adventure without robots? Check out Tsukimo for all things microprocessing, robotics, DIY drone tech and all beeping and booping goodness!</p>
+             </div>
+           </div>
+           <div class='pure-g'>
+             <h6 class='pure-u-5-5'>Hope you brought your backpack</h6>
+             <div class='pure-u-1-3'>
+               <b class='pure-u-5-5'>Mandarake</b>
+               <img src='styles/img/mandarake.jpg' />
+               <p class='pure-u-5-5'>Mandarake, the self described <b>largest manga and anime shop in the world</b>, operates a large branch in Akihabara. Specializing in pre-owned goods, it is a good place to find rare and collectible manga, figurines, dolls, posters, CDs, toys and other types of manga related goods.</p>
+             </div>
+           <div class='pure-u-1-3'>
+             <b class='pure-u-5-5'>Gundam Cafe</b>
+             <img src='styles/img/gundam.jpg' />
+             <p class='pure-u-5-5'>The Gundam Cafe is themed after the extremely popular Mobile Suit Gundam anime series. The cafe serves gundam themed dishes and is decorated with art and themes from the series. A gift shop is attached and sells character goods and souvenirs.</p>
+           </div>
+         <div class='pure-u-1-3'>
+           <b class='pure-u-5-5'>Cure Maid Cafe</b>
+           <img src='styles/img/maidCafeIntro.jpg' class='pure-img'/>
+           <p class='pure-u-5-5'>It’s said to be the first Maid cafe ever open in Akihabara as well as all over Japan. Cure Maid Cafe has its own very old style, make you feel like you are enjoying a tea time party in Victorian Era. The menu, which also has slight European taste, with seasonal changes and weekly special dishes. One of the best thing here is the variety of the tea and desserts, you should definitely try the Earl Grey tea!</p>
+         </div>
+       </div>
+         </article>
+         <hr />
+       </main>
+       <footer>
+         <small><b>Disclaimer: </b>Information shown here is not thoroughly researched, or fact-checked. There may be inaccuracies.</small><br/>
+         <small><b>Copyright</b> &copy; Akihabara District <img src='styles/img/favicon.ico' /> Changing Lives: 1-bit per byte per bite</small><br />
+         <small><b>Developed</b> by Caleb Latimer</small><br />
+         <small><span id='mail'><a href="mailto:latimercaleb@gmail.com?subject=feedback">latimercaleb@gmail.com</a></span></small>
+       </footer>
+    </body>
+</html>

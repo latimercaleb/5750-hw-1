@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--==================================================================
+//
+// Web site: Akihabara showcase
+// Web page: map.html
+// Description: Map to where the city is, making use of google api plugin
+//=================================================================-->
+<html lang='en'>
+    <head>
+      <title>Akihabara: Map</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta charset="UTF-8">
+      <link rel='stylesheet' type='text/css' href='styles/font-awesome-4.7.0/css/font-awesome.min.css' />
+      <link rel='stylesheet' type='text/css' href='styles/pure-release-1.0.0/pure-min.css' />
+      <link rel='stylesheet' type = 'text/css' href='styles/core.css'/>
+      <link rel="icon" type="image/png" sizes="16x16" href="styles/img/customFavicon/favicon-16x16.png">
+      <script type='text/javascript' src='javascript/jquery-3.2.1.min.js'></script>
+      <script type='text/javascript' src='javascript/script.js'></script>
+     <body onload="loadMap()">
+         <header class='pure-g'>
+           <h1 class='pure-u-5-5'>Akihabara</h1>
+           <h2 class='pure-u-5-5'>Every gamers paradiso</h2>
+         </header>
+       <nav class='pure-button-group' role='group' aria-label='nav-buttons'>
+         <button class='pure-button main-button'>
+             <i class="fa fa-book" aria-hidden="true"></i>
+             Main
+         </button>
+         <button class='pure-button tourist-button'>
+             <img src='styles/img/x-run.gif' width='16' />
+             Tourist
+         </button>
+         <button class='pure-button map-button'>
+             <i class="fa fa-map-o" aria-hidden="true"></i>
+             Map
+         </button>
+         <hr />
+       </nav>
+       <main>
+        <div class='pure-g'>
+          <h3 class='pure-u-1-5'>Where is it?</h3>
+          <aside class='side-blurb pure-u-4-5'>
+            <dl>
+              <dt>Short Answer</dt>
+              <dd>It's in Japan</dd>
+              <dt>Long Answer</dt>
+              <dd>It's in Japan, in the Chiyoda ward near Taito. A stone's throw from Tokyo bay. South of Ueno. West of Sumida River and Northeast of the Chiyoda Imperial Palace.  </dd>
+            </dl>
+          </aside>
+        </div>
+         <hr />
+         <article class='pure-g map-content'>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.9760193574853!2d139.77227026525938!3d35.702207730189436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ea73ea6f4ff%3A0x5eb9f1e50fe061e3!2sAkihabara%2C+Taito%2C+Tokyo+110-0006%2C+Japan!5e0!3m2!1sen!2sus!4v1506641063787" class='pure-u-5-5' allowfullscreen></iframe>
+           <p class='pure-u-5-5'>Or find it on google here <a href='https://www.google.com/maps/place/Akihabara,+Taito,+Tokyo+110-0006,+Japan/@35.7022077,139.7722703,17z/data=!3m1!4b1!4m5!3m4!1s0x60188ea73ea6f4ff:0x5eb9f1e50fe061e3!8m2!3d35.7022051!4d139.7741464'>Google Maps</a></p>
+         </article>
+         <hr />
+       </main>
+       <footer>
+         <small><b>Disclaimer: </b>Information shown here is not thoroughly researched, or fact-checked. There may be inaccuracies.</small><br/>
+         <small><b>Copyright</b> &copy; Akihabara District <img src='styles/img/favicon.ico' /> Changing Lives: 1-bit per byte per bite</small><br />
+         <small><b>Developed</b> by Caleb Latimer</small><br />
+         <small><span id='mail'><a href="mailto:latimercaleb@gmail.com?subject=feedback">latimercaleb@gmail.com</a></span></small>
+       </footer>
+    </body>
+</html>
