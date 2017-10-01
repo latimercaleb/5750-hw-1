@@ -1,6 +1,7 @@
 /*==========================================================
 
  Title: CSS External for Akihabara Showcase
+ 
  Description:
    This CSS is the external styling for the akihabara showcase website, this is the core styles for the site. Individual custom styles outside of the pure-framework.
 ==========================================================*/
@@ -133,14 +134,21 @@ dt {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1.2);
+    background-color: #000;
 }
-.norm-card {
-    /*transform: translate(50%, 50%) scale(-1.2);*/
+
+/*.norm-card {
+    transform: translate(50%, 50%) scale(-1.2);
     position: static;
     top: auto;
     left: auto;
-}
+    background-color: none;
+}*/
 
 .focused-card {
      transform: translateY(-10%) scale(1.2);
+}
+
+#moveIcon {
+    transform: translateX(45%);
 }
