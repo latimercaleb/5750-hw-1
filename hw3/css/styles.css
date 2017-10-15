@@ -1,0 +1,138 @@
+/*styles.css
+Web site: TacoTown
+ Web page: All
+ Description: Styling for tacotown, roboto custom font from google imported, mobile media query for responsive design implemented, color scheme designed with google material design color picker https://material.io/color/#!/?view.left=0&view.right=0&primary.color=039BE5
+ Images found by google search
+*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body {
+  font-family: 'Roboto';
+  background-color: #006db3;
+  background-size: 252px 392px;
+}
+
+header,footer {
+    background-color: #039be5;
+    color: #000000;
+    text-align: center;
+    margin: 50px 50px 0px 50px;
+    padding: 10px;
+}
+
+nav {
+    background-color: #63ccff;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 0px 50px 50px 50px;
+    padding: 10px;
+}
+
+.main-content {
+    background-color: #006db3;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 50px;
+    padding: 10px;
+}
+
+#mail:hover {
+    background-color: #FFFFFF;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+dd {
+    font-weight: 500;
+    padding: 5px;
+}
+
+dt {
+    padding: 5px;
+}
+
+li {
+    list-style-type: none;
+    margin: 5px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+table,tr,th,td {
+    border: 2px solid #FFFFFF;
+    padding: 5px;
+}
+
+tr:nth-child(even){
+    background-color: #63ccff;
+}
+@media screen and (max-width: 768px) {
+    body {
+      font-family: 'Roboto';
+      background-color: #006db3;
+      background-image: none;
+    }
+
+    header,footer {
+        background-color: #039be5;
+        color: #000000;
+        text-align: center;
+        margin: 5px 5px 0px 5px;
+        padding: 5px;
+    }
+
+    nav {
+        background-color: #63ccff;
+        color: #FFFFFF;
+        text-align: center;
+        margin: 0px 5px 5px 5px;
+        padding: 5px;
+    }
+
+    .main-content {
+        background-color: #006db3;
+        color: #FFFFFF;
+        text-align: center;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    #mail:hover {
+        background-color: #FFFFFF;
+        border: 2px solid black;
+        border-radius: 2px;
+    }
+
+    dd {
+        font-weight: 500;
+        padding: 5px;
+    }
+
+    dt {
+        padding: 5px;
+    }
+
+    li {
+        list-style-type: none;
+        margin: 5px;
+    }
+
+    table {
+        margin: auto;
+        border-collapse: collapse;
+    }
+
+    table,tr,th,td {
+        border: 2px solid #FFFFFF;
+        padding: 5px;
+    }
+
+    tr:nth-child(even){
+        background-color: #63ccff;
+    }
+    td img{
+        width: 100px;
+    }
+}
