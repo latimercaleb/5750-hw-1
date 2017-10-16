@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body onload = 'handleData()'>
     <header>
         <h1>Cashier Login</h1>
     </header>
@@ -35,7 +35,7 @@
                 Enter your passcode
             </div>
             <div class='card-body'>
-                <form method="post" action="" id='login'>
+                <form method="get" action='cashier.html' id='login'>
                     <div class='form-group'>
                         <label>Passcode</label>
                         <input type='password' name='pCode' placeholder="Passcode" required />
