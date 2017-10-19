@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body onload='makeMenu()'>
     <header>
         <h1>Cashier</h1>
     </header>
@@ -32,24 +32,30 @@
     <hr />
     <main class='main-content'>
         <div class='card text-white bg-dark mb-3'>
-            <div class='card-header'>
+            <!-- <div class='card-header'>
                 Enter your passcode
-            </div>
+            </div> -->
             <div class='card-body'>
                 <form>
                   <!--this page needs to be for sure, protected against login validation -->
                     <div class='form-group'>
                         <label>Entree</label>
-
+                        <select name='Entree' id='mealList'>
+                          <option>tmp</option>
+                        </select>
 
                     </div>
                     <div class='form-group'>
                         <label>Drinks</label>
+                        <select name='Drink' id='drinkList'>
+                          <option>Test-tmp</option>
+                        </select>
 
                     </div>
                     <div class='form-group'>
                         <label>Tip</label>
-
+                        <input readonly type='number' min="0" max="100"/>
+                        <!--Default value is 15, new increment is 15 -->
                     </div>
                     <div class='form-group'>
                         <label>Sales-Tax</label>

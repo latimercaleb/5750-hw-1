@@ -1,6 +1,6 @@
 var pCode;
-var entreeList = {['Select Entree ...', 0],['TacoCombo', 10],['QueasadillaCombo',12],['BuritoCombo',12],['Nachos',  12],['Salad', 8],['Taco Platter', 25]};
-var drinkList = {['Select Drink ...', 0],['Water', 0],['Lemonade', 2],['Beer', 4]};
+var entreeList = [['Select Entree ...', 0],['TacoCombo', 10],['QueasadillaCombo',12],['BuritoCombo',12],['Nachos',  12],['Salad', 8],['Taco Platter', 25]];
+var drinkList = [['Select Drink ...', 0],['Water', 0],['Lemonade', 2],['Beer', 4]];
 $(function(){
     console.log("Ready?");
 });
@@ -36,6 +36,22 @@ $('#login').submit(function(e){
     }
 });
 
+$('#drinkList').click(makeDrinkList);
+
+function makeFoodList () {
+  $.each(entreeList,function(item){
+    $('#meallist').add('<option>'+item+'</option>');
+  });
+}
+
+function makeDrinkList() {
+
+}
+
+function makeMenu () {
+  makeFoodList();
+  makeDrinkList();
+}
 function handleData(){
   pCode = JSON.parse(sessionStorage.getItem('loginCred'));
   pCode=pCode.substring(6,pCode.length);
