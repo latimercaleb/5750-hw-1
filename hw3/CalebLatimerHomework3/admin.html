@@ -1,0 +1,63 @@
+<!--==================================================================
+//
+// Web site: TacoTown
+// Web page: main.html
+// Course:   CSC 5750
+// Homework: 3
+// Author:   Caleb Latimer
+// Date:     10/14
+// Description:
+//   Resturant page with 2 supporting pages & 2 images
+//=================================================================-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TacoTown: Admin</title>
+    <link rel='stylesheet' href='css/bootstrap-3.3.7-dist/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='css/styles.css' />
+    <link rel='icon' type='image/x-icon' href='img/test.ico' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <h1>Cashier Admin</h1>
+    </header>
+    <nav>
+        <a href='main.html'>Main</a>
+        <a href='menu.html'>Menu</a>
+        <a href='admin.html'>Admin</a>
+    </nav>
+    <hr />
+    <main class='main-content'>
+        <div class='card text-white bg-dark mb-3'>
+            <div class='card-header'>
+                Enter your passcode
+            </div>
+            <div class='card-body'>
+                <form method="post" action="login.html" id='adminLoginForm'>
+                    <div class='form-group'>
+                        <label>Passcode</label>
+                        <input type='password' name='pCode' placeholder="Passcode" required />
+                    </div>
+                    <div class='btn-group'>
+                        <button class='btn btn-lg btn-danger' type="reset" id='clear'>Clear passcode </button>
+                        <button class='btn btn-lg btn-success' type='submit'>Create passcode</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <b>Copyright &copy; TacoTown 5221 Gullen Mall, Detroit, MI 48202 555-555-5555</b><br />
+        <i>All companies listed in this website are fictional and are solely for the purpose of a class assignment</i><br />
+        <hr />
+        <p>Designed and built by Caleb Latimer reach out to me at <span id='mail'><a href="mailto:latimercaleb@gmail.com?subject=feedback">latimercaleb@gmail.com</a></span></p>
+    </footer>
+    <script src='jquery-3.2.1.min.js'></script>
+    <script src='css/bootstrap-3.3.7-dist/js/bootstrap.min.js'></script>
+    <script src='app.js'></script>
+</body>
+
+</html>
