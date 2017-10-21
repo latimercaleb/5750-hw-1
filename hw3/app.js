@@ -1,6 +1,7 @@
 var pCode;
 var entreeList = [['Select Entree ...', 0],['TacoCombo', 10],['QueasadillaCombo',12],['BuritoCombo',12],['Nachos',  12],['Salad', 8],['Taco Platter', 25]];
 var drinkList = [['Select Drink ...', 0],['Water', 0],['Lemonade', 2],['Beer', 4]];
+
 $(function(){
     console.log("Ready?");
 });
@@ -19,7 +20,7 @@ $('#clear').click(function(){
 $('#login').submit(function(e){
   e.preventDefault();
     if($('input').val() == pCode){
-        window.location.assign('cashier.html')
+        window.location.assign('cashier.html');
     }
     else {
       // prepend needs a sort of fade in
@@ -35,17 +36,22 @@ $('#login').submit(function(e){
 
     }
 });
-
-$('#drinkList').click(makeDrinkList);
+// needs parent event
+// $('#mealList').load(makeFoodList);
+// $('#drinkList').click(makeDrinkList);
 
 function makeFoodList () {
-  $.each(entreeList,function(item){
-    $('#meallist').add('<option>'+item+'</option>');
+  entreeList.forEach(function(item){
+    $('#mealList').append('<option class="new-menu-item">item[0]</option>');
+    $('.new-menu-item').html(item[0]).removeClass('new-menu-item');
   });
 }
 
 function makeDrinkList() {
-
+    drinkList.forEach(function(item){
+      $('#drinkList').append('<option class="new-drink-item">item[0]</option>');
+      $('.new-drink-item').html(item[0]).removeClass('new-drink-item');
+    });
 }
 
 function makeMenu () {

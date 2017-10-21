@@ -11,6 +11,7 @@
 //=================================================================-->
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>TacoTown: Cashier</title>
     <link rel='stylesheet' href='css/bootstrap-4.0.0-beta-dist/css/bootstrap.min.css' />
@@ -37,8 +38,8 @@
             </div> -->
             <div class='card-body'>
                 <form>
-                  <!--this page needs to be for sure, protected against login validation -->
-                    <div class='form-group'>
+                    <!--this page needs to be for sure, protected against login validation -->
+                    <div class='form-group' onload="makeFoodList()">
                         <label>Entree</label>
                         <select name='Entree' id='mealList'>
                           <option>tmp</option>
@@ -54,36 +55,32 @@
                     </div>
                     <div class='form-group'>
                         <label>Tip</label>
-                        <input readonly type='number' min="0" max="100"/>
-                        <!--Default value is 15, new increment is 15 -->
+                        <input type='number' min="0" max="100" value='15' step="5" />
                     </div>
                     <div class='form-group'>
                         <label>Sales-Tax</label>
-
+                        <input readonly type='text' />
                     </div>
                     <div class='form-group'>
                         <label>Subtotal</label>
-
+                        <input readonly type="text" />
                     </div>
                     <div class='form-group'>
                         <label>Sales-Tax</label>
-
+                        <input readonly type='text' />
                     </div>
                     <div class='form-group'>
                         <label>Total</label>
-
+                        <input readonly type='text' />
                     </div>
                     <div class='form-group'>
                         <label>Tip-Cost</label>
-
+                        <input readonly type="text" />
                     </div>
-                    <div class='form-group'>
-                        <label>Total</label>
-
-                    </div>
-                    <div class='btn-group'>
-                        <button class='btn btn-lg btn-danger' type="reset" id='clear'>Clear passcode </button>
-                        <button class='btn btn-lg btn-success' type='submit'>Create passcode</button>
+                    <div class='form-group form-horizontal'>
+                        <button class='btn btn-lg btn-primary'>Totals</button>
+                        <label>Total with Tip: </label>
+                        <input readonly type="text" />
                     </div>
                 </form>
             </div>
