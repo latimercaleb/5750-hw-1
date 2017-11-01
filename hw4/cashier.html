@@ -1,0 +1,118 @@
+<!--==================================================================
+//
+// Web site: TacoTown
+// Web page: main.html
+// Course:   CSC 5750
+// Homework: 4
+// Author:   Caleb Latimer
+// Date:     10/31
+// Description:
+//   Resturant page for cashier functionality
+//=================================================================-->
+<!DOCTYPE html>
+<html>
+<!-- NOTE KILL ALL DEAD CODE! -->
+
+<head>
+    <title>TacoTown: Cashier</title>
+    <link rel='stylesheet' href='css/bootstrap-3.3.7-dist/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='css/styles.css' />
+    <link rel='icon' type='image/x-icon' href='img/test.ico' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body onload='makeMenu()'>
+    <header>
+        <h1>Cashier</h1>
+    </header>
+    <nav>
+        <a href='main.html'>Main</a>
+        <a href='admin.html'>Admin</a>
+        <a href='menu.html'>Menu</a>
+    </nav>
+    <hr />
+    <main class='main-content'>
+        <!-- <div class='card-header'>
+                Enter your passcode
+            </div> -->
+        <div class='container'>
+            <div class='row'>
+                <div class='col-md-6 down-some'>
+                    <form>
+                        <!--this page needs to be for sure, protected against login validation -->
+                        <div class='form-group'>
+                            <label>Entree:</label>
+                            <select name='Entree' id='mealList'></select>
+                        </div>
+                        <div class='form-group'>
+                            <label>Drink:</label>
+                            <select name='Drink' id='drinkList'> </select>
+                        </div>
+                        <div class='form-group'>
+                            <label>Tip(%):</label>
+                            <input type='number' min="0" max="100" value="15" step="5" id='tip' />
+                        </div>
+                        <div class='form-group'>
+                            <label>Subtotal:</label>
+                        </div>
+                        <div class='form-group'>
+                            <label>Sales-Tax (6%):</label>
+                        </div>
+                        <div class='form-group'>
+                            <label>Total:</label>
+                        </div>
+                        <div class='form-group'>
+                            <label>Tip-Cost:</label>
+                        </div>
+                        <div class='form-group form-horizontal'>
+                            <button class='btn btn-lg btn-primary' id='total'>Totals</button>
+                        </div>
+                    </form>
+                </div>
+                <h1>Cost ($)</h1>
+                <div class='col-md-6'>
+                    <form>
+                        <!--this page needs to be for sure, protected against login validation -->
+                        <div class='form-group'>
+                            <input readonly type='text' id='mealCost' />
+                        </div>
+                        <div class='form-group'>
+                            <input readonly type='text' id='drinkCost' />
+                        </div>
+                        <div class='form-group'>
+                            <br />
+                        </div>
+                        <div class='form-group'>
+                            <input readonly type="text" id='subTotalCost' />
+                        </div>
+                        <div class='form-group'>
+                            <input readonly type='text' id='salesTaxCost' />
+                        </div>
+                        <div class='form-group'>
+                            <input readonly type='text' id='totalCost' />
+                        </div>
+                        <div class='form-group'>
+                            <input readonly type="text" id='tipCost' />
+                        </div>
+                        <div class='form-group form-horizontal'>
+                            <label>Total with Tip: </label>
+                            <input readonly type="text" id='finalTotal' />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <b>Copyright &copy; TacoTown 5221 Gullen Mall, Detroit, MI 48202 555-555-5555</b><br />
+        <i>All companies listed in this website are fictional and are solely for the purpose of a class assignment</i><br />
+        <hr />
+        <p>Designed and built by Caleb Latimer reach out to me at <span id='mail'><a href="mailto:latimercaleb@gmail.com?subject=feedback">latimercaleb@gmail.com</a></span></p>
+    </footer>
+
+    <script src='jquery-3.2.1.min.js'></script>
+    <script src='css/bootstrap-3.3.7-dist/js/bootstrap.min.js'></script>
+    <script src='app.js'></script>
+</body>
+
+</html>
