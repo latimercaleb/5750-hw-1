@@ -4,7 +4,12 @@ Web site: TacoTown
  Description: Styling for tacotown, roboto custom font from google imported, mobile media query for responsive design implemented, color scheme designed with google material design color picker https://material.io/color/#!/?view.left=0&view.right=0&primary.color=039BE5
  Images found by google search
 */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.down-some {
+    margin-top: 5.25em;
+}
+
+/*@import url('https://fonts.googleapis.com/css?family=Roboto');
 body {
   font-family: 'Roboto';
   background-color: #006db3;
@@ -41,38 +46,8 @@ nav {
     border-radius: 2px;
 }
 
-dd {
-    font-weight: 500;
-    padding: 5px;
-}
 
-dt {
-    padding: 5px;
-}
-
-li {
-    list-style-type: none;
-    margin: 5px;
-}
-
-table {
-    margin: auto;
-    border-collapse: collapse;
-}
-
-table,tr,th,td {
-    border: 2px solid #FFFFFF;
-    padding: 5px;
-}
-
-tr:nth-child(even){
-    background-color: #63ccff;
-}
-
-.down-some {
-    margin-top: 70px;
-}
 
 select,option,input {
     color: #000000;
-}
+}*/
