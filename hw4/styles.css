@@ -1,0 +1,33 @@
+/*styles.css
+Web site: TacoTown
+ Web page: All
+ Description: Styling for tacotown, roboto custom font from google imported, mobile media query for responsive design implemented, color scheme designed with google material design color picker https://material.io/color/#!/?view.left=0&view.right=0&primary.color=039BE5
+ Images found by google search
+*/
+
+/*selectors*/
+header,footer {
+    text-align: center;
+    margin: 50px 50px 0px 50px;
+    padding: 10px;
+}
+
+nav {
+    text-align: center;
+    margin: 0px 50px 50px 50px;
+    padding: 10px;
+}
+
+/*Classes*/
+.bigger-group {
+    padding-bottom: 31px;
+}
+
+.space-btn {
+  margin-right: 5px;
+}
+
+.main-content {
+    margin: 50px;
+    padding: 10px;
+}
