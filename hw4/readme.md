@@ -2,7 +2,7 @@
 
 This assignment focuses on making use of JavaScript, HTML storage and working with data in JSON format. I used the following technologies:
 
-- Materialize CSS
+- Bootstrap 3
 - jQuery
 
 **Notes**

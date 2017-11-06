@@ -14,84 +14,98 @@
 
 <head>
     <title>TacoTown: Cashier</title>
-    <link rel='stylesheet' href='materialize/css/materialize.min.css' />
+    <link rel='stylesheet' href='bootstrap/css/bootstrap.min.css' />
     <link rel='stylesheet' href='styles.css' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body onload='makeMenu()'>
-    <header>
+<body onload='makeMenu()'
+      onunload="saveData()">
+    <header class='blue lighten-5'>
         <h1>Cashier</h1>
     </header>
     <hr />
     <main>
-        <div class='container'>
-            <div class='row'>
-                <div class='col m6 down-some'>
-                    <form class='col m6'>
-                        <div class='input-field col m12'>
-                            <select name='Entree' id='mealList'>
-                                <option value='0' disabled selected>Select Entree ...</option>
-                            </select>
-                            <label>Entree:</label>
-                        </div>
-                        <div class='input-field col m12'>
-                            <select name='Drink' id='drinkList'>
-                                <option value='0' disabled selected>Select Drink ...</option>
-                             </select>
-                            <label class="left-align">Drink:</label>
-                        </div>
-                        <div class='input-field col m12'>
-                            <input type='number' min="0" max="100" value="15" step="5" id='tip' />
-                            <label class="left-align">Tip(%):</label>
-                        </div>
-                        <div class='input-field col m12'>
-                            <h4 class="left-align">Subtotal:</h4>
-                        </div>
-                        <div class='input-field col m12'>
-                            <h4 class="left-align">Sales-Tax (6%):</h4>
-                        </div>
-                        <div class='input-field col m12'>
-                            <h4 class="left-align">Total:</h4>
-                        </div>
-                        <div class='input-field col m12'>
-                            <h4 class="left-align">Tip-Cost:</h4>
-                        </div>
-                        <div class='input-field form-horizontal'>
-                            <button class='btn btn-lg btn-primary' id='total'>Totals</button>
-                        </div>
-                    </form>
-                </div>
-                <h3 class="right-align">Cost ($)</h3>
-                <form class='col m6'>
-                    <div class='input-field'>
-                        <input readonly type='text' id='mealCost' />
+      <div class='container'>
+          <div class='row'>
+              <div class='col-md-6'>
+                  <form>
+                    <div class='form-group bigger-group'>
+                      <label>Sale ID: </label>
+                      <input readonly id='salesIDContainer' type="number" />
                     </div>
-                    <div class='input-field'>
-                        <input readonly type='text' id='drinkCost' />
-                    </div>
-                    <div class='input-field'>
-                        <br />
-                    </div>
-                    <div class='input-field'>
-                        <input readonly type="text" id='subTotalCost' />
-                    </div>
-                    <div class='input-field'>
-                        <input readonly type='text' id='salesTaxCost' />
-                    </div>
-                    <div class='input-field'>
-                        <input readonly type='text' id='totalCost' />
-                    </div>
-                    <div class='input-field'>
-                        <input readonly type="text" id='tipCost' />
-                    </div>
-                    <div class='input-field form-horizontal'>
-                        <label>Total with Tip: </label>
-                        <input readonly type="text" id='finalTotal' />
-                    </div>
-                </form>
+                      <div class='form-group'>
+                          <label>Entree:</label>
+                          <select name='Entree' id='mealList'></select>
+                      </div>
+                      <div class='form-group'>
+                          <label>Drink:</label>
+                          <select name='Drink' id='drinkList'> </select>
+                      </div>
+                      <div class='form-group'>
+                          <label>Tip(%):</label>
+                          <input type='number' min="0" max="100" value="15" step="5" id='tip' />
+                      </div>
+                      <div class='form-group'>
+                          <label>Subtotal:</label>
+                      </div>
+                      <div class='form-group'>
+                          <label>Sales-Tax (6%):</label>
+                      </div>
+                      <div class='form-group'>
+                          <label>Total:</label>
+                      </div>
+                      <div class='form-group'>
+                          <label>Tip-Cost:</label>
+                      </div>
+                      <div class='form-group form-horizontal'>
+                          <button class='btn btn-lg btn-primary' id='total'>Totals</button>
+                      </div>
+                  </form>
+              </div>
+              <h1>Cost ($)</h1>
+              <div class='col-md-6'>
+                  <form>
+                      <!--this page needs to be for sure, protected against login validation -->
+                      <div class='form-group'>
+                          <input readonly type='text' id='mealCost' />
+                      </div>
+                      <div class='form-group'>
+                          <input readonly type='text' id='drinkCost' />
+                      </div>
+                      <div class='form-group'>
+                          <br />
+                      </div>
+                      <div class='form-group'>
+                          <input readonly type="text" id='subTotalCost' />
+                      </div>
+                      <div class='form-group'>
+                          <input readonly type='text' id='salesTaxCost' />
+                      </div>
+                      <div class='form-group'>
+                          <input readonly type='text' id='totalCost' />
+                      </div>
+                      <div class='form-group'>
+                          <input readonly type="text" id='tipCost' />
+                      </div>
+                      <div class='form-group form-horizontal pull-left'>
+                          <label>Total with Tip: </label>
+                          <input readonly type="text" id='finalTotal' />
+                      </div>
+                  </form>
+              </div>
+          </div>
+          <div class='row'>
+            <div class='btn-group btn-group-sm col-md-6 col-md-offset-6'>
+              <button id='newBtn' class='btn btn-success space-btn'><span class='glyphicon glyphicon-plus'></span> New</button>
+              <button id='prevBtn' class='btn btn-primary space-btn'><span class='glyphicon glyphicon-fast-backward'></span> Prev</button>
+              <button id='nextBtn' class='btn btn-primary space-btn'><span class='glyphicon glyphicon-fast-forward'></span> Next</button>
+              <button id='resetBtn' class='btn btn-warning space-btn'><span class='glyphicon glyphicon-refresh'></span> Reset Sale</button>
+              <button id='deleteBtn' class='btn btn-danger space-btn'><span class='glyphicon glyphicon-remove'></span> Delete</button>
+              <button id='resetAllBtn' class='btn btn-danger space-btn'><span class='glyphicon glyphicon-trash'></span> Reset All</button>
             </div>
-        </div>
+          </div>
+      </div>
     </main>
     <footer>
         <b>Copyright &copy; TacoTown 5221 Gullen Mall, Detroit, MI 48202 555-555-5555</b><br />
@@ -100,7 +114,7 @@
         <p>Designed and built by Caleb Latimer reach out to me at <span id='mail'><a href="mailto:latimercaleb@gmail.com?subject=feedback">latimercaleb@gmail.com</a></span></p>
     </footer>
     <script src='jquery-3.2.1.min.js'></script>
-    <script src='materialize/js/materialize.min.js'></script>
+    <script src='bootstrap/js/bootstrap.min.js'></script>
     <script src='app.js'></script>
 </body>
 

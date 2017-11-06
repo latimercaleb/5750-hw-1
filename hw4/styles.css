@@ -5,37 +5,26 @@ Web site: TacoTown
  Images found by google search
 */
 
-.down-some {
-    margin-top: 5.25em;
+.bigger-group {
+    padding-bottom: 31px;
 }
-
-/*@import url('https://fonts.googleapis.com/css?family=Roboto');
-body {
-  font-family: 'Roboto';
-  background-color: #006db3;
-  background-size: 252px 392px;
+.space-btn {
+  margin-right: 5px;
 }
-
 header,footer {
-    background-color: #039be5;
-    color: #000000;
     text-align: center;
     margin: 50px 50px 0px 50px;
     padding: 10px;
 }
 
 nav {
-    background-color: #63ccff;
-    color: #FFFFFF;
     text-align: center;
     margin: 0px 50px 50px 50px;
     padding: 10px;
 }
 
+
 .main-content {
-    background-color: #006db3;
-    color: #FFFFFF;
-    text-align: center;
     margin: 50px;
     padding: 10px;
 }
@@ -45,9 +34,3 @@ nav {
     border: 2px solid black;
     border-radius: 2px;
 }
-
-
-
-select,option,input {
-    color: #000000;
-}*/
