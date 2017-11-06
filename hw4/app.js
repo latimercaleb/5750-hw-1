@@ -1,6 +1,7 @@
 // JavaScript code for cashier page functionality
 
 // Globals
+// Implemented sale-object as opposed to a 2D array, exercised object oriented programming with jQuery
 var sale = function sale(a,b,c,d) {
   this.customIndex = a;
   this.entree = b;
@@ -14,15 +15,17 @@ var salesList= [];
 var salesID = 1001;
 var saleCount = 0;
 var salePtr = -1;
-$('#salesIDContainer').val(salesID);
+$('#salesIDContainer').val(salesID); // initialized the first container to 1001
+
+
 $(function(){
     console.log("Ready?");
-    if(localStorage.getItem('ID')&&localStorage.getItem('count')&&localStorage.getItem('ptr')&&localStorage.getItem('sales')){
+    if(localStorage.getItem('ID')&&localStorage.getItem('count')&&localStorage.getItem('ptr')&&localStorage.getItem('sales')){ // Check localStorage, if it has data, process it and pick up where we left off
       loadData();
     }
 });
 
-// Event Listeners
+// Event Listeners for all button behaviors
 $('#total').click(calculateTotal);
 $('#newBtn').click(newSale);
 $('#prevBtn').click(lastSale);
@@ -32,6 +35,8 @@ $('#deleteBtn').click(deleteSale);
 $('#resetAllBtn').click(deleteAll);
 
 // Callbacks
+
+// when the entree menu item is selected update the value in the readonly field with the cost
 function updateFood(){
   var mealSelection = $('#mealList').val();
   var mealPrice = entreeList.find(function(meal){
@@ -41,10 +46,10 @@ function updateFood(){
   $('#mealCost').val(function(){
       return mealPrice;
   });
-
   return mealPrice;
 }
 
+// when the drink menu item is selected update the value in the readonly field with the cost
 function updateDrink() {
    var drinkSelection = $('#drinkList').val();
    var drinkPrice = drinkList.find(function(drink){
@@ -57,16 +62,19 @@ function updateDrink() {
      return drinkPrice;
 }
 
+// when the calculated values changes, round result
 function roundResult (x){
   return Math.round(x * 100) / 100;
 }
 
-function handleData(){
-  pCode = JSON.parse(sessionStorage.getItem('loginCred'));
-  pCode=pCode.substring(6,pCode.length);
-  console.log('Credentials are: '+ pCode);
-}
+// Former Callback for the login validation, unused in HW 4
+// function handleData(){
+//   pCode = JSON.parse(sessionStorage.getItem('loginCred'));
+//   pCode=pCode.substring(6,pCode.length);
+//   console.log('Credentials are: '+ pCode);
+// }
 
+// Generate a list of food items based off of the predefined array
 function makeFoodList () {
   entreeList.forEach(function(item){
     $('#mealList').append('<option class="new-menu-item">item[0]</option>');
@@ -74,6 +82,7 @@ function makeFoodList () {
   });
 }
 
+// Generate a list of drink items based off of the predefined array
 function makeDrinkList() {
     drinkList.forEach(function(item){
       $('#drinkList').append('<option class="new-drink-item">item[0]</option>');
@@ -81,6 +90,7 @@ function makeDrinkList() {
     });
 }
 
+// Call to make the menus
 function makeMenu () {
   makeFoodList();
   makeDrinkList();
@@ -88,6 +98,7 @@ function makeMenu () {
   $('#drinkList').change(updateDrink);
 }
 
+// Triggered on totals button click calculate the values of the other read only fields
 function calculateTotal(e){
     e.preventDefault();
     if($('#mealList').val() == 'Select Entree ...' || $('#drinkList').val() === 'Select Drink ...' ){
@@ -121,6 +132,7 @@ function calculateTotal(e){
     }
 }
 
+// Handles info from localStorage
 function loadData() {
   if(localStorage.getItem('ID')&&localStorage.getItem('count')&&localStorage.getItem('ptr')&&localStorage.getItem('sales')){
     // read local storage for the big 4
@@ -138,6 +150,7 @@ function loadData() {
   }
 }
 
+// Writes data to local storage
 function saveData() {
   // Set the 4 items into local storage
   localStorage.setItem('ID',salesID);
@@ -148,6 +161,7 @@ function saveData() {
   localStorage.setItem('sales', newString);
 }
 
+// Save the the newest sale to the array
 function newSale() {
   if($('#mealList').val() == 'Select Entree ...' || $('#drinkList').val() === 'Select Drink ...' ){
       alert('You are missing an entree or drink! Please select a valid option from the dropdown');
@@ -174,6 +188,7 @@ function newSale() {
   }
 }
 
+// grab the previously entered sale
 function lastSale() {
   if($('#mealList').val() == 'Select Entree ...' || $('#drinkList').val() === 'Select Drink ...' ){
     salePtr --;
@@ -232,6 +247,7 @@ else {
 }
 }
 
+// grab the information for the next sale in the list
 function nextSale() {
   if($('#mealList').val() == 'Select Entree ...' || $('#drinkList').val() === 'Select Drink ...' ){
     salePtr = 0;
@@ -291,6 +307,7 @@ else {
   }
 }
 
+// clear all fields and reset defaults
 function resetSale() {
   $('#mealList').val(entreeList[0][0]);
   $('#drinkList').val(drinkList[0][0]);
@@ -304,12 +321,13 @@ function resetSale() {
   $('#finalTotal').val('');
 }
 
+// Check the salePtr when opening from sessionStorage, if it points to a deleted item or an undesired value, correct it
 function setNext(object) {
   if(object === undefined && salePtr > saleCount){ // start from the beginning we are out of bounds
     $('#mealList').val(entreeList[salesList[0].entree]);
     $('#drinkList').val(drinkList[salesList[0].drink]);
     $('#tip').val(object.tip);
-    $('#salesIDContainer').val(salesList[0].customIndex);
+    $('#salesIDContainer').val(parseInt(salesList[0].customIndex));
     updateFood();
     updateDrink();
   }
@@ -317,7 +335,7 @@ function setNext(object) {
     $('#mealList').val(entreeList[salesList[saleCount -1].entree]);
     $('#drinkList').val(drinkList[salesList[saleCount -1].drink]);
     $('#tip').val(object.tip);
-    $('#salesIDContainer').val(salesList[saleCount -1].customIndex);
+    $('#salesIDContainer').val(parseInt(salesList[saleCount -1].customIndex));
     updateFood();
     updateDrink();
   }
@@ -325,12 +343,13 @@ function setNext(object) {
   $('#mealList').val(entreeList[object.entree]);
   $('#drinkList').val(drinkList[object.drink]);
   $('#tip').val(object.tip);
-  $('#salesIDContainer').val(object.customIndex);
+  $('#salesIDContainer').val(parseInt(object.customIndex));
   updateFood();
   updateDrink();
   }
 }
 
+// Delete an item from the list and point to the next thing in the list
 function deleteSale() {
   saleCount--;
   salesList.splice(salePtr,1);
@@ -354,6 +373,7 @@ function deleteSale() {
     }
   }
 
+// Delete everything and wipe session storage
 function deleteAll() {
   salesList= [];
   salesID = 1001;

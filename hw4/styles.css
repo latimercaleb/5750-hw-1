@@ -5,12 +5,7 @@ Web site: TacoTown
  Images found by google search
 */
 
-.bigger-group {
-    padding-bottom: 31px;
-}
-.space-btn {
-  margin-right: 5px;
-}
+/*selectors*/
 header,footer {
     text-align: center;
     margin: 50px 50px 0px 50px;
@@ -23,14 +18,16 @@ nav {
     padding: 10px;
 }
 
+/*Classes*/
+.bigger-group {
+    padding-bottom: 31px;
+}
+
+.space-btn {
+  margin-right: 5px;
+}
 
 .main-content {
     margin: 50px;
     padding: 10px;
-}
-
-#mail:hover {
-    background-color: #FFFFFF;
-    border: 2px solid black;
-    border-radius: 2px;
 }
