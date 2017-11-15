@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+
+<!--==================================================================
+//
+// Title: Send Data With AJAX and GET
+// Description:
+//   This web page takes data and sends them to the web server using 
+// AJAX and GET.
+// 
+//=================================================================-->
+
+<head>
+  <title>Send Data With AJAX and GET</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Dan Ouellette(creator), Caleb Latimer(modifier)"/>
+  <meta name="description" content="AJAX statements"/>
+  <meta http-equiv="Expires" content="-1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script type="text/javascript">
+    "use strict";
+    
+    //==================================================
+    // sendData
+    //==================================================
+    function sendData()
+    {
+    
+      // Declare variables
+      var first = document.getElementById('txtFirstName').value;
+      var last = document.getElementById('txtLastName').value;
+      var qstring;
+
+      // Test input values and prepare query string
+      if (first.length == 0) first = "(none)";
+      if (last.length == 0) last = "(none)";
+      qstring = "first=" + first + "&last=" + last;
+
+      // At this point, we could bypass AJAX and use window.open
+      //window.open("SendDataWithJavaScriptAndGETMethodResponse.php?" +
+      //  qstring, "_self");
+    
+      // Attempt to communicate with server
+      try
+      {
+      
+        // Create server request
+        var xhttp = new XMLHttpRequest();
+      
+        // Define callback function
+        xhttp.onreadystatechange = function() 
+        {
+          if (this.readyState == 4 && this.status == 200)
+            document.getElementById('lblStatus').innerHTML = 
+              this.responseText;
+        };
+        
+        // Define command and send
+        xhttp.open("GET", "SendDataWithAJAXAndGETResponse.php?" + 
+          qstring, true);
+        xhttp.send();
+        
+      }
+      catch (ex)
+      {
+        window.alert("Error" + "\nName: " + ex.name + 
+          "\nMessage: " + ex.message + "\nStack: " + ex.stack);
+      }
+
+    }
+        
+    //==================================================
+    // clearData
+    //==================================================
+    function clearData()
+    {
+      document.getElementById('txtFirstName').value = "";
+      document.getElementById('txtLastName').value = "";
+      document.getElementById('lblStatus').innerHTML = "Data cleared.";
+    }
+
+  </script>
+
+</head>
+ 
+<body>
+<style>
+  body {
+    color: black;
+    font-family: 16px;
+    background-color: #00838f;
+    margin: 10px;
+    padding: 20px;
+  }
+</style>
+  <h1>Send Data With AJAX and GET</h1>
+  
+  <label>First name: </label>
+    <input type="text" id="txtFirstName" />
+  <br><br>
+  <label>Last name: </label>
+    <input type="text" id="txtLastName" />
+  <br><br>
+  
+  <button 
+    type="button" 
+    onclick="sendData()">
+    Send Data
+  </button>
+  &nbsp;&nbsp;
+  
+  <button 
+    type="button" 
+    onclick="clearData()">
+    Clear Data
+  </button>
+  <br><br>
+  
+  <label id="lblStatus" class="status">(status)</label>
+  <br>
+
+  <hr>
+
+</body>
+</html>
