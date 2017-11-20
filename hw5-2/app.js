@@ -1,7 +1,5 @@
 // JavaScript code for cashier page functionality
 
-// NEEDS A MAJOR REFACTOR NOW!
-
 // Globals
 // Implemented sale-object as opposed to a 2D array, exercised object oriented programming with jQuery
 var sale = function sale(a,b,c,d) {
@@ -45,27 +43,27 @@ $('#summaryBtn').click(showSummary);
 // when the entree menu item is selected update the value in the readonly field with the cost
 function updateFood(){
   var mealSelection = $('#mealList').val();
-  var mealPrice = entreeList.find(function(meal){
-      return meal[0] === mealSelection;
+  var mealTitle = entreeList.find(function(meal){
+      return meal.name === mealSelection;
   });
-  mealPrice = mealPrice[1];
+  var price = mealTitle.value;
   $('#mealCost').val(function(){
-      return mealPrice;
+      return price;
   });
-  return mealPrice;
+  return price;
 }
 
 // when the drink menu item is selected update the value in the readonly field with the cost
 function updateDrink() {
    var drinkSelection = $('#drinkList').val();
-   var drinkPrice = drinkList.find(function(drink){
-       return drink[0] === drinkSelection;
+   var drinkTitle = drinkList.find(function(drink){
+       return drink.name === drinkSelection;
    });
-     drinkPrice = drinkPrice[1];
-     $('#drinkCost').val(function(){
-         return drinkPrice;
+     var price = drinkTitle.value;
+     $('#dx rinkCost').val(function(){
+         return price;
      });
-     return drinkPrice;
+     return price;
 }
 
 // when the calculated values changes, round result
@@ -83,36 +81,64 @@ function roundResult (x){
 // Generate a list of food items based off of the predefined array
 function makeFoodList () {
   entreeList.forEach(function(item){
-    $('#mealList').append('<option class="new-menu-item">item[0]</option>');
-    $('.new-menu-item').html(item[0]).removeClass('new-menu-item');
+    $('#mealList').append('<option class="new-menu-item">item.name</option>');
+    $('.new-menu-item').html(item.name).removeClass('new-menu-item');
   });
+  $('#mealList').change(updateFood);
 }
 
 // Generate a list of drink items based off of the predefined array
 function makeDrinkList() {
     drinkList.forEach(function(item){
-      $('#drinkList').append('<option class="new-drink-item">item[0]</option>');
-      $('.new-drink-item').html(item[0]).removeClass('new-drink-item');
+      $('#drinkList').append('<option class="new-drink-item">item.name</option>');
+      $('.new-drink-item').html(item.name).removeClass('new-drink-item');
     });
+    $('#drinkList').change(updateDrink);
 }
 
 // Call to make the menus
 function makeMenu () {
   // need ajax here to call on the new menu stuff
-  var foodResponse = $.get("food.json")
-  .done(function(data){
-    alert('Food Found!');
-    var newList = data;
-    console.log(newList);
-  })
-  .fail(function(e){
+  // $.ajax({
+  //   async: true,
+  //   url: "food.json",
+  //   method: "GET",
+  //   success: function(res){
+  //     for(itm =0; itm< res.length;itm++)
+  //       entreeList.push(res[itm]);
+  //     makeFoodList();
+  //   },
+  //   error: function(err){
+  //     alert('Food Not Found!');
+  //     console.log(err);
+  //   }
+  // });
+  $.get("food.json")
+   .done(function(res){
+    for(itm =0; itm< res.length;itm++)
+      entreeList.push(res[itm]);
+      makeFoodList();
+   })
+   .fail(function(e){
     alert('Food Not Found!');
     console.log(e);
-  });
-  makeFoodList();
-  makeDrinkList();
-  $('#mealList').change(updateFood);
-  $('#drinkList').change(updateDrink);
+   });
+
+  $.get("drink.json")
+   .done(function(res){
+    for(itm =0; itm< res.length;itm++)
+      drinkList.push(res[itm]);
+      makeDrinkList();
+   })
+   .fail(function(err){
+     alert('Drink Not Found!');
+     console.log(err);
+   });
+  
+  //makeFoodList();
+  //makeDrinkList();
+  //$('#mealList').change(updateFood);
+  //$('#drinkList').change(updateDrink);
 }
 
 // Triggered on totals button click calculate the values of the other read only fields
