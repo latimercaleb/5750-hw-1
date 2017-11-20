@@ -1,5 +1,7 @@
 // JavaScript code for cashier page functionality
+
 // NEEDS A MAJOR REFACTOR NOW!
+
 // Globals
 // Implemented sale-object as opposed to a 2D array, exercised object oriented programming with jQuery
 var sale = function sale(a,b,c,d) {
@@ -8,9 +10,12 @@ var sale = function sale(a,b,c,d) {
   this.drink = c;
   this.tip = d;
 };
-var entreeList = [['Select Entree ...', 0], ['TacoCombo', 10],['QueasadillaCombo',12],['BuritoCombo',12],['Nachos',  12],['Salad', 8],['Taco Platter', 25], ['Test', 7.50]];
-var drinkList = [['Select Drink ...', 0], ['Water', 0],['Lemonade', 2],['Beer', 4], ['Test', 2.75]];
 
+//var entreeList = [['Select Entree ...', 0], ['TacoCombo', 10],['QueasadillaCombo',12],['BuritoCombo',12],['Nachos',  12],['Salad', 8],['Taco Platter', 25], ['Test', 7.50]];
+//var drinkList = [['Select Drink ...', 0], ['Water', 0],['Lemonade', 2],['Beer', 4], ['Test', 2.75]];
+
+var entreeList = [];
+var drinkList= [];
 var salesList= [];
 var salesID = 1001;
 var saleCount = 0;
@@ -33,6 +38,7 @@ $('#nextBtn').click(nextSale);
 $('#resetBtn').click(resetSale);
 $('#deleteBtn').click(deleteSale);
 $('#resetAllBtn').click(deleteAll);
+$('#summaryBtn').click(showSummary);
 
 // Callbacks
 
@@ -92,6 +98,17 @@ function makeDrinkList() {
 
 // Call to make the menus
 function makeMenu () {
+  // need ajax here to call on the new menu stuff
+  var foodResponse = $.get("food.json")
+  .done(function(data){
+    alert('Food Found!');
+    var newList = data;
+    console.log(newList);
+  })
+  .fail(function(e){
+    alert('Food Not Found!');
+    console.log(e);
+  });
   makeFoodList();
   makeDrinkList();
   $('#mealList').change(updateFood);
@@ -382,4 +399,9 @@ function deleteAll() {
   $('#salesIDContainer').val(salesID);
   resetSale();
   localStorage.clear();
+}
+
+// Function to construct query string and send to to php page
+function showSummary(){
+  alert('Page');
 }
