@@ -427,7 +427,7 @@ function deleteAll() {
 
 // Function to construct query string and send to to php page
 function showSummary(){
-  alert('Page');
+  //alert('Page');
   var totalBeforeTip = 0, totalWithTip =0, tipTotal =0;
   // totalSales = saleCount;
   for(var i =0; i < salesList.length; i++){
@@ -451,12 +451,31 @@ function showSummary(){
                                             + "\n Totals Sales: " + saleCount);
 
   // Send get to php with q-string
-  $.get("summary.php", {TotalSales: saleCount, TotalsNoTip:totalBeforeTip, TotalTip: tipTotal, TotalWithTip: totalWithTip})
-   .done(function(){
-     // redirect
-   })
-   .fail(function(){
-     // display error
-   });
+  $.ajax({
+    url:"summary.php",
+    type: "get",
+    data:{
+      TotalSales: saleCount, 
+      TotalsNoTip:totalBeforeTip, 
+      TotalTip: tipTotal, 
+      TotalWithTip: totalWithTip
+    },
+    success: function(resp){
+      console.log(resp);
+      // I have no idea why the below works? I'll have to ask after class.
+      window.location = "summary.php?TotalSales="+saleCount+"&TotalsNoTip="+totalBeforeTip+"&TotalTip="+tipTotal+"&TotalWithTip="+totalWithTip;
+    },
+    error: function(err){
+      console.log(err);
+    }
+  });
+  // $.get("summary.php", {TotalSales: saleCount, TotalsNoTip:totalBeforeTip, TotalTip: tipTotal, TotalWithTip: totalWithTip})
+  //  .done(function(){
+  //    // redirect
+  //    window.location.href = "summary.php";
+  //  })
+  //  .fail(function(){
+  //    // display error
+  //  });
 // Handle the postback from the get request??
 }
