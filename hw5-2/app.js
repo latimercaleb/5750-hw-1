@@ -450,25 +450,31 @@ function showSummary(){
                                             + " \n Totals+Tip: "+ totalWithTip
                                             + "\n Totals Sales: " + saleCount);
 
-  // Send get to php with q-string
-  $.ajax({
-    url:"summary.php",
-    type: "get",
-    data:{
-      TotalSales: saleCount, 
-      TotalsNoTip:totalBeforeTip, 
-      TotalTip: tipTotal, 
-      TotalWithTip: totalWithTip
-    },
-    success: function(resp){
-      console.log(resp);
-      // I have no idea why the below works? I'll have to ask after class.
-      window.location = "summary.php?TotalSales="+saleCount+"&TotalsNoTip="+totalBeforeTip+"&TotalTip="+tipTotal+"&TotalWithTip="+totalWithTip;
-    },
-    error: function(err){
-      console.log(err);
-    }
-  });
+  // Send get to php with q-string, two methods
+  // A) AJAX approach, incorrect should just use query String for running to a page redirect
+  // $.ajax({
+  //   url:"summary.php",
+  //   type: "get",
+  //   data:{
+  //     TotalSales: saleCount, 
+  //     TotalsNoTip:totalBeforeTip, 
+  //     TotalTip: tipTotal, 
+  //     TotalWithTip: totalWithTip
+  //   },
+  //   success: function(resp){
+  //     console.log(resp);
+  //     // I have no idea why the below works? I'll have to ask after class.
+  //     window.location = "summary.php?TotalSales="+saleCount+"&TotalsNoTip="+totalBeforeTip+"&TotalTip="+tipTotal+"&TotalWithTip="+totalWithTip;
+  //   },
+  //   error: function(err){
+  //     console.log(err);
+  //   }
+  // });
+
+  // B) Direct approach
+  window.location = "summary.php?TotalSales="+saleCount+"&TotalsNoTip="+totalBeforeTip+"&TotalTip="+tipTotal+"&TotalWithTip="+totalWithTip;
+
+
   // $.get("summary.php", {TotalSales: saleCount, TotalsNoTip:totalBeforeTip, TotalTip: tipTotal, TotalWithTip: totalWithTip})
   //  .done(function(){
   //    // redirect
