@@ -1,0 +1,22 @@
+[
+    {
+      "name":"Select Drink ...", 
+      "value": 0
+    },
+    {
+      "name":"Water", 
+      "value": 0
+    },
+    {
+      "name":"Lemonade", 
+      "value": 2
+    },
+    {
+      "name":"Beer",
+      "value": 4
+    },
+    {
+      "name":"Test", 
+      "value": 2.75
+    }
+]

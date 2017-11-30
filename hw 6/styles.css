@@ -1,0 +1,31 @@
+/*styles.css
+Web site: TacoTown
+ Description: Styling for core components
+*/
+
+/*selectors*/
+header,footer {
+    text-align: center;
+    margin: 50px 50px 0px 50px;
+    padding: 10px;
+}
+
+nav {
+    text-align: center;
+    margin: 0px 50px 50px 50px;
+    padding: 10px;
+}
+
+/*Classes*/
+.bigger-group {
+    padding-bottom: 31px;
+}
+
+.space-btn {
+  margin-right: 5px;
+}
+
+.main-content {
+    margin: 50px;
+    padding: 10px;
+}
